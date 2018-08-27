@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlSelectCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/floorNameTextView"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        fontPath="fonts/source_sans_pro_regular.ttf"
+        android:text="HHHHHHHHHHH"
+        android:ellipsize="end"
+
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/tickButton"
+        android:layout_toStartOf="@+id/tickButton"
+        android:maxLines="1" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/green_tick"
+        android:visibility="invisible"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/tickButton" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@android:color/background_dark"
+        android:layout_height=".2dp" />
+</LinearLayout>

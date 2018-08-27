@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingRight="20dp"
+    android:paddingLeft="@dimen/login_margin_right"
+    android:paddingTop="@dimen/item_padding_top"
+    android:paddingBottom="@dimen/item_padding_bottom"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/commentExpandBtn"
+        fontPath="fonts/source_sans_pro_semi_bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/grey_button"
+        android:text="Comment"
+        android:textColor="@color/traquer_white" />
+
+    <ImageView
+        android:id="@+id/iv_missing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/item_not_found" />
+
+    <LinearLayout
+        android:id="@+id/commentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_toLeftOf="@+id/iv_missing">
+
+        <TextView
+            android:id="@+id/txtShipmentNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/five_a"
+            fontPath="fonts/source_sans_pro_regular.ttf" />
+
+        <TextView
+            android:id="@+id/txtShipmentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/four_one"
+            android:text=""
+            android:textSize="@dimen/text_18"
+            fontPath="fonts/source_sans_pro_semi_bold.ttf" />
+
+        <TextView
+            android:id="@+id/txtShipmentStatus"
+            android:visibility="gone"
+            fontPath="fonts/source_sans_pro_regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/five_a"
+            android:textSize="13sp" />
+    </LinearLayout>
+</RelativeLayout>

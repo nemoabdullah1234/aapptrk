@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_list"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/traquer_black"
+        android:orientation="vertical"
+        android:paddingBottom="12dp"
+        android:paddingLeft="7dp"
+        android:paddingTop="5dp"
+        android:paddingRight="7dp">
+
+        <TextView
+            android:id="@+id/txtDueBack"
+            fontPath="fonts/source_sans_pro_regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/eight_c"
+
+            android:textSize="@dimen/text_16" />
+
+        <TextView
+            android:id="@+id/txtDocterName"
+            android:layout_marginTop="20dp"
+            fontPath="fonts/source_sans_pro_semi_bold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            android:textColor="@color/traquer_white"
+            android:textSize="@dimen/text_18" />
+
+        <TextView
+            android:id="@+id/txtSurgeryName"
+            fontPath="fonts/source_sans_pro_regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/traquer_white"
+            android:textSize="@dimen/text_14" />
+
+        <TextView
+            android:id="@+id/txtLocation"
+            fontPath="fonts/source_sans_pro_regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/traquer_white"
+            android:textSize="@dimen/text_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtPhone"
+                fontPath="fonts/source_sans_pro_regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/call_btn"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/traquer_white"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/txtFax"
+                fontPath="fonts/source_sans_pro_regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:textColor="@color/traquer_white"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_below="@+id/ll_top"
+        android:layout_height="match_parent">
+
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/fl_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/blue_circle"
+            android:padding="5dp"
+            android:layout_marginRight="27dp"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/iv_sync"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/connection" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblName"
+                fontPath="fonts/source_sans_pro_regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name : "
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:layout_alignLeft="@+id/saveBtn"
+                android:layout_marginBottom="8dp"
+
+                />
+
+            <TextView
+                android:id="@+id/txtName"
+                fontPath="fonts/source_sans_pro_regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/lblName"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:text="sfsfsf" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblNumber"
+                fontPath="fonts/source_sans_pro_regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone : "
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:layout_alignLeft="@+id/saveBtn"
+                android:layout_marginBottom="8dp"
+
+                />
+
+            <TextView
+                android:id="@+id/txtNumber"
+                fontPath="fonts/source_sans_pro_regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_toRightOf="@id/lblName"
+
+                android:textSize="16sp"
+                android:text="sfsfsf" />
+        </LinearLayout>
+
+        <com.nicbit.traquer.stryker.util.TypefaceTextView
+            android:id="@+id/saveBtn"
+            fontPath="fonts/source_sans_pro_semi_bold.ttf"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@id/lblName"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_blue"
+            android:gravity="center"
+            android:text="SAVE"
+            android:textColor="@color/traquer_white"
+            android:textSize="16sp"
+
+            />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

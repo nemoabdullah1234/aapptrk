@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/traquer_white"
+    tools:context="com.nicbit.traquer.stryker.about.AboutActivity">
+
+    <LinearLayout
+        android:id="@+id/lv_searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_vertical"
+        android:background="@color/traquer_black">
+
+        <ImageView
+            android:id="@+id/cancelBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_arrow"
+            android:background="@color/traquer_black"
+            android:layout_weight=".5"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.3"
+            android:layout_margin="2dp"
+            android:background="@drawable/rectangle">
+
+            <EditText
+                android:id="@+id/searchTextView"
+                fontPath="fonts/source_sans_pro_regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/rectangle"
+                android:drawableLeft="@drawable/search_icon"
+                android:hint="@string/search"
+                android:drawablePadding="6dp"
+                android:layout_marginLeft="6dp"
+                android:imeOptions="actionSearch"
+                android:gravity="center_vertical"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/voiceBtn"
+                android:maxLines="1"
+                android:layout_toLeftOf="@+id/voiceBtn"
+                android:layout_alignParentLeft="true" />
+
+            <ImageView
+                android:id="@+id/voiceBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/speak"
+                android:padding="2dp"
+                android:layout_centerVertical="true" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <com.nicbit.traquer.stryker.view.EmptyRecyclerView
+        android:id="@+id/selectCityRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/enableLocationTextView"
+        android:layout_below="@+id/lv_searchbar"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+    <include
+        android:id="@+id/tv_empty_view"
+        android:layout_below="@+id/lv_searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/empty_view_layout" />
+
+    <TextView
+        android:id="@+id/enableLocationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:maxLines="1" />
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlChild"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_shipment_child_item"
+        android:background="@color/ig_white">
+
+        <com.nicbit.traquer.stryker.util.TypefaceTextView
+            android:id="@+id/txtLabel5"
+            style="@style/style11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/default_padding_inner"
+            android:maxLines="1" />
+
+        <com.nicbit.traquer.stryker.util.TypefaceTextView
+            android:id="@+id/txtLabel6"
+            style="@style/style12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:layout_marginTop="@dimen/margin_shipment_item"
+            android:layout_marginLeft="@dimen/default_padding_inner"
+            android:layout_below="@+id/txtLabel5"
+            android:singleLine="true" />
+
+        <com.nicbit.traquer.stryker.util.TypefaceTextView
+            android:id="@+id/txtLabel7"
+            style="@style/style12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Used"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_below="@+id/txtLabel6"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/margin_line"
+            android:layout_marginLeft="@dimen/default_padding_inner"
+            android:layout_marginRight="@dimen/default_margin_left_first"
+            android:background="@color/color_line" />
+
+    </RelativeLayout>
+</LinearLayout>

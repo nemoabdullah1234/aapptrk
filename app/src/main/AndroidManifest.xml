@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nicbit.traquer.stryker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="kontakt.io.API_KEY"
+            android:value="MdahnpkIOBvCxfOOmCKHtCdTaEXaqcSx" />
+        <meta-data
+            android:name="CLOUDINARY_URL"
+            android:value="cloudinary://389291737963921:3jeJvfciqsJP5mfBLnwpfpIVl98@drvjylp2e" />
+
+        <activity
+            android:name="com.nicbit.traquer.warehouse.login.WHLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.StrykerHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".splash.StrykerSplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".about.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".caseDetail.CaseDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.StrykerLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".setting.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.StrykerForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forgotPassword.StrykerResetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".help.HelpActivity" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="52d93d2e5608dc35bae09dbaf9661e54bfb08785" />
+
+        <activity
+            android:name=".returns.CaseHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".search.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nicbit.traquer.common.issueDetail.IssueDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".notification.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".editProfile.StrykerEditProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <service
+            android:name=".NBService"
+            android:enabled="true"
+            android:stopWithTask="false"
+            android:exported="false" />
+        <service
+            android:name="com.nicbit.traquer.common.tracking.UpdateHardwareStatus"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".util.ZbarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".returns.detail.CaseHistoryDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.nicbit.traquer.common.comments.ItemCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".completed.CompletedCaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nicbit.traquer.common.issueDetail.AddNewCommentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".inventory.list.InventoryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".inventory.details.InventoryDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".returns.detail.ItemQuantityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nicbit.traquer.common.crop.CropImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nicbit.traquer.common.newInventory.location.SelectCityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <meta-data
+            android:name="com.urbanairship.autopilot"
+            android:value="com.urbanairship.Autopilot" />
+
+        <receiver
+            android:name="com.nicbit.traquer.common.tracking.BluetoothReciver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.nicbit.traquer.common.tracking.LocationReciver">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".util.ShowLargeImageActivity" />
+        <activity
+            android:name="com.nicbit.traquer.common.utils.SignatureActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" />
+
+        <!-- warehouse activity -->
+        <receiver
+            android:name="com.nicbit.traquer.warehouse.ChargingChangeListener"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.nicbit.traquer.warehouse.WarehouseHomeActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="com.nicbit.traquer.common.tracking.NetworkChangeReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.nicbit.traquer.common.newInventory.zone.ZoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.nicbit.traquer.common.LocationTrackerActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".inventory.frigdoor.TemperatureInfoActivity"
+            android:screenOrientation="portrait" />
+
+
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+    </application>
+
+</manifest>

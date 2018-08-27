@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/traquer_white"
+    tools:context="com.nicbit.traquer.stryker.caseDetail.ShipmentViewFragment">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/traquer_white"
+        android:divider="@drawable/line_divider"
+        android:dividerHeight="1dp"
+        android:text="@string/hello_blank_fragment" />
+
+</LinearLayout>

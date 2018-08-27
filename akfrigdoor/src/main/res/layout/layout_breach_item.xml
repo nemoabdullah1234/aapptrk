@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@android:color/white"
+    >
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toLeftOf="@+id/temperatureTxt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:id="@+id/datetxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="February 25"
+            />
+
+        <TextView
+            android:id="@+id/timeTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2d 9h 14mins"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/temperatureTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="70"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/temperatureImg"
+        android:gravity="center"
+        android:layout_alignRight="@+id/temperatureImg"
+        android:layout_alignEnd="@+id/temperatureImg" />
+
+    <ImageView
+        android:id="@+id/temperatureImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/ll"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>

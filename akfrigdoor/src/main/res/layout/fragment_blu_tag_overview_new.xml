@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:customfont="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <include
+        android:id="@id/top_view"
+        layout="@layout/product_detail_top_view" />
+
+    <TextView
+        android:id="@+id/line0"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/top_view"
+        android:fadingEdge="horizontal" />
+
+    <TextView
+        android:id="@+id/txtAttrName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/line0"
+        android:padding="10dp"
+        android:text="Temp Range (Min/Max)"
+
+        />
+
+    <TextView
+        android:id="@+id/txtAttrValue1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/top_view"
+        android:layout_toRightOf="@id/txtAttrName1"
+        android:gravity="right"
+        android:padding="10dp"
+        android:text="NA"
+
+        />
+
+    <TextView
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txtAttrName1"
+        android:fadingEdge="horizontal" />
+
+    <TextView
+        android:id="@+id/txtAttrName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/line1"
+        android:padding="10dp"
+        android:text="Recorded Temp (Min/Max)"
+
+        />
+
+    <TextView
+        android:id="@+id/txtAttrValue2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/line1"
+        android:layout_toRightOf="@id/txtAttrName2"
+        android:gravity="right"
+        android:padding="10dp"
+        android:text="NA"
+       />
+
+    <!--<TextView-->
+    <!--android:id="@+id/line2"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_below="@id/txtAttrName2"-->
+    <!--android:background="@color/line"-->
+    <!--android:fadingEdge="horizontal" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txtAttrName3"-->
+    <!--style="?attr/themeTextViewStyle"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_below="@id/line2"-->
+    <!--android:padding="10dp"-->
+    <!--android:text="Max temp."-->
+    <!--android:textColor="@color/label"-->
+    <!--android:textSize="@dimen/text_view_size_subheading" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txtAttrValue3"-->
+    <!--style="?attr/themeTextViewStyle"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_below="@id/line2"-->
+    <!--android:layout_toRightOf="@id/txtAttrName3"-->
+    <!--android:gravity="right"-->
+    <!--android:padding="10dp"-->
+    <!--android:text="NA"-->
+    <!--android:textColor="@color/label"-->
+    <!--customfont:customTypeface="Roboto_light.ttf"-->
+    <!--android:textSize="@dimen/text_view_size_subheading" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/line3"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_below="@id/txtAttrName3"-->
+    <!--android:background="@color/line"-->
+    <!--android:fadingEdge="horizontal" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txtAttrName4"-->
+    <!--style="?attr/themeTextViewStyle"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_below="@id/line3"-->
+    <!--android:padding="10dp"-->
+    <!--android:text="Temp. range"-->
+    <!--android:textColor="@color/label"-->
+    <!--android:textSize="@dimen/text_view_size_subheading" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txtAttrValue4"-->
+    <!--style="?attr/themeTextViewStyle"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_below="@id/line3"-->
+    <!--android:layout_toRightOf="@id/txtAttrName4"-->
+    <!--android:gravity="right"-->
+    <!--android:padding="10dp"-->
+    <!--android:text="NA"-->
+    <!--android:textColor="@color/label"-->
+    <!--customfont:customTypeface="Roboto_light.ttf"-->
+    <!--android:textSize="@dimen/text_view_size_subheading" />-->
+
+    <RelativeLayout
+        android:id="@+id/rl_breach_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtAttrValue2"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fadingEdge="horizontal"
+            android:padding="5dp"
+            android:text="ALL BREACHES"
+            />
+
+        <TextView
+            android:id="@+id/bline1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/text"
+            android:fadingEdge="horizontal" />
+
+        <TextView
+            android:id="@+id/bline2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/text"
+            android:fadingEdge="horizontal" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_breach_line">
+
+        <ListView
+            android:id="@+id/breachesListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:dividerHeight="1dp" />
+
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No breach found" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

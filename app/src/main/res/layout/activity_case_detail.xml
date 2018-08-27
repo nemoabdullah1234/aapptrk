@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/traquer_black"
+    android:orientation="vertical"
+    tools:context=".caseDetail.CaseDetailActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/shipment_details_toolbar" />
+
+    <RelativeLayout
+
+        android:id="@+id/shipmentHeaderView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="7dp"
+        android:background="@color/traquer_black">
+
+        <Button
+            android:id="@+id/btnReport"
+            fontPath="fonts/source_sans_pro_regular.ttf"
+            android:layout_width="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="7dp"
+            android:background="@null"
+            android:drawableTop="@drawable/icon_notes"
+            android:text="@string/notes"
+            android:textAllCaps="false"
+            android:textColor="@color/eight_c"
+            android:textSize="@dimen/text_16" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnMap"
+            android:layout_toRightOf="@+id/btnReport"
+            android:layout_toStartOf="@+id/btnMap"
+            android:layout_toEndOf="@+id/btnReport"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtShipmentStatus"
+                android:layout_width="match_parent"
+                fontPath="fonts/source_sans_pro_semi_bold.ttf"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@color/eight_c"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/txtShipmentLocation"
+                fontPath="fonts/source_sans_pro_regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@color/eight_c"
+                android:textSize="@dimen/text_16"
+                android:singleLine="true" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnMap"
+
+            fontPath="fonts/source_sans_pro_regular.ttf"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:drawablePadding="7dp"
+            android:background="@null"
+            android:drawableTop="@drawable/map_marker_icon"
+            android:text="Map"
+            android:textAllCaps="false"
+            android:textColor="@color/eight_c"
+            android:textSize="@dimen/text_16"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shipmentHeaderView">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/listPager"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/padeIndicatorLayout"
+
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/padeIndicatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_alignParentBottom="true"
+            android:background="#F0F0EF">
+
+
+            <com.nicbit.traquer.stryker.caseDetail.CirclePageIndicator
+                android:id="@+id/padeIndicatorView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/mapPager"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shipmentHeaderView"
+        android:background="@color/traquer_white"
+        android:padding="@dimen/padding"
+        android:scrollbars="horizontal"
+        android:visibility="gone" />
+
+</RelativeLayout>

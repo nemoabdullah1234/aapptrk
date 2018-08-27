@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/item_padding_bottom"
+    android:paddingLeft="@dimen/login_margin_right"
+    android:paddingRight="20dp"
+    android:paddingTop="@dimen/item_padding_top">
+
+    <TextView
+        android:id="@+id/tv_item_id"
+        fontPath="fonts/source_sans_pro_regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:lines="1"
+        android:text=""
+
+        android:textColor="@color/five_a"
+        android:textSize="@dimen/text_14" />
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        fontPath="fonts/source_sans_pro_semi_bold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_item_id"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/iv_status"
+        android:lines="1"
+        android:text=""
+        android:textColor="@color/four_one"
+        android:textSize="@dimen/text_18" />
+
+    <ImageView
+        android:id="@+id/iv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/grey_tick"
+        android:visibility="visible" />
+</RelativeLayout>

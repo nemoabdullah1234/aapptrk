@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="@color/ig_black" />
+
+
+    <RadioGroup
+        android:id="@+id/sortByRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_radio_btn"
+            android:layout_gravity="right"
+            android:button="@null"
+            android:background="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="@string/etd_radio_button_text" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_radio_btn"
+            android:layout_gravity="right"
+            android:button="@null"
+            android:background="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="@string/case_no_radio_button_text" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_radio_btn"
+            android:layout_gravity="right"
+            android:button="@null"
+            android:background="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="@string/hospital_radio_button_text" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_radio_btn"
+            android:layout_gravity="right"
+            android:button="@null"
+            android:background="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="@string/doctor_radio_button_text" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_radio_btn"
+            android:layout_gravity="right"
+            android:button="@null"
+            android:background="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="@string/surgery_type_radio_button_text" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_radio_btn"
+            android:layout_gravity="right"
+            android:button="@null"
+            android:background="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="@string/surgery_date_radio_button_text" />
+
+    </RadioGroup>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="@color/ig_black" />
+
+    <CheckBox
+        android:id="@+id/orderByCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ascending_radio_button_text" />
+
+    <Button
+        android:id="@+id/buttonDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/done_button_text" />
+
+
+</LinearLayout>

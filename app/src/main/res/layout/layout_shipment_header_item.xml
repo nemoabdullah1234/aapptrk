@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_grey_with_grey_border"
+        android:paddingBottom="@dimen/padding_shipment_header_item"
+        android:paddingRight="@dimen/default_padding_inner"
+        android:paddingEnd="@dimen/default_padding_inner">
+
+        <ImageView
+            android:id="@+id/errorImageView"
+            android:layout_width="@dimen/default_icon_size"
+            android:layout_height="@dimen/default_icon_size"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            android:background="@drawable/img_alert" />
+
+        <com.nicbit.traquer.stryker.util.TypefaceTextView
+            android:id="@+id/txtLabel1"
+            style="@style/style7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/subtitle_height"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/padding_shipment_header_item"
+            android:text=""
+            android:maxLines="1" />
+
+        <com.nicbit.traquer.stryker.util.TypefaceTextView
+            android:id="@+id/txtLabel2"
+            style="@style/style8"
+            android:layout_toRightOf="@+id/txtLabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txtLabel1"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:text=""
+            android:layout_toLeftOf="@+id/reportIssueBtn"
+            android:layout_toStartOf="@+id/reportIssueBtn"
+            android:maxLines="1" />
+
+        <com.nicbit.traquer.stryker.util.TypefaceTextView
+            android:id="@+id/txtLabel3"
+            style="@style/style2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtLabel1"
+            android:layout_marginTop="@dimen/margin_small"
+            android:drawableLeft="@drawable/location"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:layout_alignStart="@+id/txtLabel1"
+            android:layout_toLeftOf="@+id/txtLabel4"
+            android:text=""
+            android:maxLines="1"
+            android:layout_alignLeft="@+id/txtLabel1" />
+
+        <com.nicbit.traquer.stryker.util.TypefaceTextView
+            android:id="@+id/txtLabel4"
+            style="@style/style10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:ellipsize="end"
+            android:text=""
+            android:layout_alignTop="@+id/txtLabel3"
+            android:layout_toLeftOf="@+id/reportIssueBtn"
+            android:layout_toStartOf="@+id/reportIssueBtn"
+            android:maxLines="1" />
+
+        <com.nicbit.traquer.stryker.util.TypefaceTextView
+            android:id="@+id/reportIssueBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtLabel4"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/bg"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/padding_shipment_header_item"
+            android:padding="@dimen/default_margin_left_first"
+            android:text="@string/three_dots_text"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

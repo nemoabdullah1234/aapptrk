@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/traquer_white"
+    android:orientation="vertical">
+
+    <TextView
+        fontPath="fonts/source_sans_pro_regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/e_4"
+        android:padding="10dp"
+        android:text="Recent"
+        android:textColor="@color/five_a"
+        android:textSize="@dimen/text_14" />
+
+
+    <com.nicbit.traquer.stryker.view.EmptyRecyclerView
+        android:id="@+id/recentHistoryListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/tvRecentEmptyView"
+        fontPath="fonts/source_sans_pro_regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:drawablePadding="10dp"
+        android:visibility="invisible"
+        android:textSize="20sp"
+        android:text="No Recent Search"
+        android:textColor="@android:color/darker_gray" />
+
+
+</LinearLayout>

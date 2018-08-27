@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.akwa.frigdoor.BluTagActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/startBtn"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="10dp"></ScrollView>
+
+        <TextView
+            android:id="@+id/startBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_above="@+id/stopBtn"
+            android:gravity="center"
+            android:text="Start Recording"
+             />
+
+        <TextView
+            android:id="@+id/stopBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Finish Recording"
+            />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,1 @@
+include ':app', ':blutaglibrary', ':akcore', ':akgeofence', ':aklogs', ':akproximity', ':aktracking', ':akrulehandler', ':aksync', ':akfrigdoor', ':aknfc'

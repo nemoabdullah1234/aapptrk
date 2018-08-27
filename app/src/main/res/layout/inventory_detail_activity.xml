@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nicbit.traquer.stryker.about.AboutActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/inventory_details_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/inventory_item_details"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            layout="@layout/inventorydetails_item_details" />
+
+        <com.nicbit.traquer.stryker.view.EmptyRecyclerView
+            android:id="@+id/listView"
+            android:layout_below="@+id/inventory_item_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/traquer_white"
+            android:scrollbars="none" />
+
+        <include
+            android:id="@+id/tv_empty_view"
+            layout="@layout/empty_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/inventory_item_details" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
